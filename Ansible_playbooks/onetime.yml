@@ -1,0 +1,11 @@
+---
+- hosts: all
+  sudo: yes
+  user: user
+  connection: ssh
+  gather_facts: no 
+  tasks:
+  - name: Running uptime
+    shell: uptime
+  - debug: var=uptime
+    run_once: true
