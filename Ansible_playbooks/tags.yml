@@ -1,0 +1,15 @@
+---
+- hosts: centos
+  user: user
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+     - name: Removing git 
+       yum: pkg=git state=absent
+       tags: 
+         - package
+     - name: Removing Ansible
+       yum: pkg=ansible state=absent
+       tags:
+         - ANSIBLE 
