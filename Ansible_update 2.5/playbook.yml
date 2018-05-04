@@ -1,0 +1,9 @@
+--- # Ansible 2.5 simple COMMAND Module
+- hosts: centos
+  remote_user: root
+  tasks:
+   - name: Using command Module
+     command: git --version
+     register: result
+   - debug: var=result
+   
