@@ -1,0 +1,9 @@
+--- # Ansible-2.5 Conditions
+- hosts: all
+  user: user
+  sudo: yes
+  connection: ssh
+  tasks:
+       - name: Installing git using conditions
+         command: yum -y install git 
+         when: ansible_os_family == "RedHat" 
