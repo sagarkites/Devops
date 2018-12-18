@@ -1,0 +1,9 @@
+--- # Ansible 2.5 STAT Module
+- hosts: centos
+  remote_user: root
+  tasks: 
+  - name: Status File present or not
+    stat: path=/home/user/dialogbox.sh
+    register: path
+  - debug: msg="File present"
+    when: path.stat.exists == True 

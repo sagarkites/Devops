@@ -1,0 +1,10 @@
+--- # Ansible 2.5 Loop the Packages
+- hosts: centos
+  remote_user: root
+  tasks:
+    - name: Installing Packages
+      yum: name={{ item }} state=present
+      with_items:
+          - git
+          - ansible
+          - httpd
