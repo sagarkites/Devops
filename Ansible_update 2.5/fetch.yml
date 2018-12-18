@@ -1,6 +1,0 @@
---- # Ansible 2.5 FETCH Module
-- hosts: centos
-  remote_user: root
-  tasks:
-  - name: Fetch Module
-    fetch: src=/home/user/dialogbox.sh  dest=/home/sagar_scott 

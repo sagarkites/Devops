@@ -1,7 +1,0 @@
----
-- hosts: centos
-  sudo: yes
-  gather_facts: no
-  tasks:
-  - name: Changing permission of File
-    file: dest=/home/user/scott.txt mode=0777

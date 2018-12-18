@@ -1,6 +1,0 @@
---- # Ansible 2.5 FILE_PERMISSIONS
-- hosts: centos
-  remote_user: root
-  tasks:
-  - name: Changing File Permissions
-    file: path=/home/user/epel-release-latest-7.noarch.rpm mode=0777
