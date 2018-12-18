@@ -1,0 +1,15 @@
+--- # Ansible-2.5 Loops
+- hosts: centos
+  user: user
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+      - name: Looping Packages
+        yum: pkg={{ item }} state=installed
+        with_items:
+            - git
+            - ansible
+            - httpd
+
+        

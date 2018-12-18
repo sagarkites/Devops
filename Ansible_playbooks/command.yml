@@ -1,0 +1,12 @@
+---
+- hosts: all
+  user: user
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks: 
+      - name: Running the Command Module 
+        command: ansible-doc -l | grep command
+        register: result
+      - debug: var=result
+

@@ -1,0 +1,6 @@
+--- # Ansible 2.5 CRON
+- hosts: centos
+  remote_user: root
+  tasks:
+  - name: Using cron job schdule Task
+    cron: name="checking git version" minute="0" hour="2" job="git --version >/home/user/cron.log"
