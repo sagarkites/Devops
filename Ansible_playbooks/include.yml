@@ -1,0 +1,8 @@
+---
+- hosts: centos
+  user: user
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+     - include: Playbooks/packages.yml

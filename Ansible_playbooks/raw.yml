@@ -1,0 +1,10 @@
+---
+- hosts: centos
+  user: user
+  sudo: yes
+  tasks:
+      - name: Installing Git
+        yum: pkg=git state=absent
+      - name: Logging
+        raw: yum installed list > /home/user/git.log
+  
