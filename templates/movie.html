@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<body background="https://wallpapercave.com/wp/h86hWKp.jpg">
+<head>
+	<title>{{ title }}</title>
+</head>
+<style>
+		.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+span {
+	color: white;
+	position: absolute;
+	top: 100px;
+}
+li {
+	color: white; /* bullet color */
+} 
+header {
+	font: 40px;
+}
+img {
+	border-radius: 50%;
+}
+   </style>
+<body>
+	<div class="navbar">
+  <a href="http://127.0.0.1:5000/">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">About 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+    	<a href="https://en.wikipedia.org/wiki/Christopher_Nolan">Wiki</a>
+      <a href="https://www.youtube.com/results?search_query=christopher+nolan+interviews">Interviews</a>
+      <a href="https://www.imdb.com/name/nm0634240/">Imdb</a>
+    </div>
+  </div> 
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+  <header style="color: white; font-size: 30px;"> Movies </header>
+  <div class="d_down">
+   <a href="https://gomovies.cool/film/batman-begins-2071/watching.html?ep=4749241w">Batman Begins</a>
+   <a href="https://gomovies.cool/film/batman-the-dark-knight-2070/watching.html?ep=1366103">Batman Dark Knight</a>
+   <a href="https://www.movieslit.com/the-dark-knight-rises/">Batman Dark Knight Rises</a>
+   <a href="https://gomovies.cool/film/inception-2756/watching.html?ep=1997141w">Inception</a>
+   <a href="https://gomovies.cool/film/interstellar-1655/watching.html?ep=1366147">Interstellar</a>        	
+  </div>
+</div>
+<span style="font-size:30px;cursor:pointer"onclick="openNav()">Open</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</body>
+</html>
