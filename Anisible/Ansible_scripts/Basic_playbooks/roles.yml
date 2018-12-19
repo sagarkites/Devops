@@ -1,0 +1,8 @@
+---
+- hosts: centos
+  sudo: yes
+  user: user
+  connection: ssh
+  gather_facts: no
+  roles:
+  - centos

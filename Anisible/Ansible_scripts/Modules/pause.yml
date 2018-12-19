@@ -1,0 +1,15 @@
+---
+- hosts: centos
+  sudo: yes
+  user: user
+  connection: ssh
+  tasks:
+  - name: Removing the Ansible
+    yum: pkg=ansible state=absent 
+  - name: Pause
+    pause:
+    prompt: "Ansible is erased"
+  - name: checking the ansible
+    command: ansible --version
+    register: result
+  - debug: var=result

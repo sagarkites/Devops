@@ -1,0 +1,8 @@
+---
+- hosts: centos
+  user: user
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: cron
+    cron: name="list files" minute=0 hour=1 job="ll /etc/asnible/ > /home/user/cron.log"

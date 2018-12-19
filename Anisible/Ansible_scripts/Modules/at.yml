@@ -1,0 +1,9 @@
+---
+- hosts: centos
+  user: user
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+     - name: Using at Module
+       at: command="uptime" count=10 unit="minutes"

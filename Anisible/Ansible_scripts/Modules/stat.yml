@@ -1,0 +1,15 @@
+---
+- hosts: centos
+  user: user
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: Checking status of file
+    stat: path=/home/user/sagar
+    register: p
+  - debug: msg="The file exists" 
+    when: p.stat.exists == True
+       
+       
+       

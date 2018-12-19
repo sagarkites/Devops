@@ -1,0 +1,9 @@
+---
+- hosts: centos
+  user: user
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - name: Getting File from remote
+    fetch: src=/etc/ansible/ansible.cfg dest=/home/sagar
