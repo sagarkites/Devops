@@ -20,7 +20,7 @@ cd ~/flaskapp
 echo "Hello World" > index.html
 ```
 ## You should now see "Hello World" displayed if you navigate to (your instance public DNS)/flaskapp in your browser
-Running a simple Flask app(flaskapp.py)
+## Running a simple Flask app(flaskapp.py)
 ```
 from flask import Flask
 app = Flask(__name__)
