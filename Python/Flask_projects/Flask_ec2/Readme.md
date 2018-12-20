@@ -52,3 +52,8 @@ WSGIScriptAlias / /var/www/html/flaskapp/flaskapp.wsgi
     Allow from all
 </Directory>
 ```
+## Restart the webserver
+```
+sudo apachectl restart
+```
+## If you navigate your browser to your EC2 instance's public DNS again, you should see the text returned by the hello_world function of our app, "Hello from Flask!"
