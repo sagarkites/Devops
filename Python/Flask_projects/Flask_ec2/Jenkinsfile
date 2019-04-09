@@ -1,0 +1,10 @@
+pipeline {
+        agent any
+                stages {
+                        stage('Bulid'){
+                                steps { 
+                                        echo 'Bulid started'
+                                        python flaskapp.py
+                                }
+}
+}
